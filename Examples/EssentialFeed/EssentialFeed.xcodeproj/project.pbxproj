@@ -24,6 +24,7 @@
 		1C6BD49028C7B52500492637 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6BD48F28C7B52500492637 /* RemoteFeedLoader.swift */; };
 		1C815A4528FA173100549377 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C815A4428FA173100549377 /* CacheFeedUseCaseTests.swift */; };
 		1C815A4A2900BB0000549377 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C815A492900BB0000549377 /* LocalFeedLoader.swift */; };
+		1C815A4C2900C18C00549377 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C815A4B2900C18C00549377 /* FeedStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		1C6BD48F28C7B52500492637 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		1C815A4428FA173100549377 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		1C815A492900BB0000549377 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
+		1C815A4B2900C18C00549377 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1C815A492900BB0000549377 /* LocalFeedLoader.swift */,
+				1C815A4B2900C18C00549377 /* FeedStore.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C815A4C2900C18C00549377 /* FeedStore.swift in Sources */,
 				1C67BF2828D0D940007866E7 /* URLSessionHTTPClient.swift in Sources */,
 				1C6BD49028C7B52500492637 /* RemoteFeedLoader.swift in Sources */,
 				1C6825AD28C956FF009CFCC0 /* HTTPClient.swift in Sources */,
