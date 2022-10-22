@@ -27,6 +27,7 @@
 		1C815A4C2900C18C00549377 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C815A4B2900C18C00549377 /* FeedStore.swift */; };
 		1C93CC1E2901D1F000EB1C21 /* RemoteFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CC1D2901D1F000EB1C21 /* RemoteFeedItem.swift */; };
 		1C93CC202901D97000EB1C21 /* LocalFeedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CC1F2901D97000EB1C21 /* LocalFeedImage.swift */; };
+		1C93CC722904424800EB1C21 /* LoadFeedFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C93CC712904424800EB1C21 /* LoadFeedFromCacheUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		1C815A4B2900C18C00549377 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
 		1C93CC1D2901D1F000EB1C21 /* RemoteFeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedItem.swift; sourceTree = "<group>"; };
 		1C93CC1F2901D97000EB1C21 /* LocalFeedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImage.swift; sourceTree = "<group>"; };
+		1C93CC712904424800EB1C21 /* LoadFeedFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				1C815A4428FA173100549377 /* CacheFeedUseCaseTests.swift */,
+				1C93CC712904424800EB1C21 /* LoadFeedFromCacheUseCaseTests.swift */,
 			);
 			path = FeedCache;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 					};
 					1C6BD46C28C6659400492637 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1400;
 					};
 					1C6BD47628C6659500492637 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -370,6 +374,7 @@
 				1C6BD48D28C692E800492637 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				1C67BF2328CEA233007866E7 /* URLSessionHTTPClientTests.swift in Sources */,
 				1C815A4528FA173100549377 /* CacheFeedUseCaseTests.swift in Sources */,
+				1C93CC722904424800EB1C21 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				1C67BF2628CFB653007866E7 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +551,7 @@
 		1C6BD48228C6659500492637 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -568,6 +574,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -575,6 +582,7 @@
 		1C6BD48328C6659500492637 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
