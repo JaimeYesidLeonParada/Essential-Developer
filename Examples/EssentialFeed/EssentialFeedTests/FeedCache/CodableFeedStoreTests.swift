@@ -210,17 +210,14 @@ final class CodableFeedStoreTests: XCTestCase {
         return insertionError
     }
     
-    private func deleteCache(from: CodableFeedStore) -> Error? {
+    private func deleteCache(from sut: CodableFeedStore) -> Error? {
         let exp = expectation(description: "Wait for cache deletion")
         var deletionError: Error?
-        from.deleteCachedFeed { error in
-            deletionError = error
-            XCTAssertNil(deletionError, "Expected empty cache deletion to succeed")
+        sut.deleteCachedFeed { receivedDeletionError in
+            deletionError = receivedDeletionError
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
-        
-        expect(from, toRetrieve: .empty)
         
         return deletionError
     }
