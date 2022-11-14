@@ -7,6 +7,18 @@ import EssentialFeed
 
 final class EssentialFeedCacheIntegrationTests: XCTestCase {
     
+    override func setUp() {
+        super.setUp()
+        
+        setupEmptyStoreState()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        undoStoreSideEffects()
+    }
+    
     func test_load_deliversNoItemsOnEmptyCache() {
         let sut = makeSUT()
         
@@ -15,6 +27,7 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
             switch result {
             case let .success(imageFeed):
                 XCTAssertEqual(imageFeed, [], "Expected empty feed")
+                
             case let .failure(error):
                 XCTFail("Expected successful feed result, got \(error) instead")
             }
@@ -22,6 +35,33 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
+    }
+    
+    func test_load_deliversItemsSavedOnASeparateInstance() {
+        let sutPerformSave = makeSUT()
+        let sutToPerformLoad = makeSUT()
+        let feed = uniqueImageFeed().models
+        
+        let saveExp = expectation(description: "Wait for save completion")
+        sutPerformSave.save(feed) { saveError in
+            XCTAssertNil(saveError, "Expected to save feed successfully")
+            saveExp.fulfill()
+        }
+        wait(for: [saveExp], timeout: 1.0)
+        
+        let loadExp = expectation(description: "Wait for load completion")
+        sutToPerformLoad.load { loadResult in
+            switch loadResult {
+            case let .success(imageFeed):
+                XCTAssertEqual(imageFeed, feed)
+                
+            case let .failure(error):
+                XCTFail("Expected successful feed result, got \(error) instead")
+            }
+            
+            loadExp.fulfill()
+        }
+        wait(for: [loadExp], timeout: 1.0)
     }
     
     
@@ -35,6 +75,18 @@ final class EssentialFeedCacheIntegrationTests: XCTestCase {
         trackForMemoryLeaks(sut, file: file, line: line)
         
         return sut
+    }
+    
+    private func setupEmptyStoreState() {
+        deleteStoreArtifacts()
+    }
+    
+    private func undoStoreSideEffects() {
+        deleteStoreArtifacts()
+    }
+    
+    private func deleteStoreArtifacts() {
+        try? FileManager.default.removeItem(at: testSpecificStoreURL())
     }
     
     private func testSpecificStoreURL() -> URL {
