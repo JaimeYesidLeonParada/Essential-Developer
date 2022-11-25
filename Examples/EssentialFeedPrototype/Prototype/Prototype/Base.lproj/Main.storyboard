@@ -27,7 +27,7 @@
                                             <rect key="frame" x="20" y="17" width="353" height="526"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="RzT-fb-qny" userLabel="Location Container">
-                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="38.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="38.333333333333336"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOg-wI-eqb" userLabel="Pin Container">
                                                             <rect key="frame" x="0.0" y="0.0" width="10" height="38.333333333333336"/>
@@ -47,7 +47,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M13-wM-pY4">
-                                                            <rect key="frame" x="16" y="0.0" width="63" height="36"/>
+                                                            <rect key="frame" x="16" y="0.0" width="337" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -85,7 +85,7 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="RzT-fb-qny" firstAttribute="width" secondItem="9nX-mm-6cV" secondAttribute="width" multiplier="0.223796" id="4l4-6m-pmW"/>
+                                                <constraint firstAttribute="trailing" secondItem="RzT-fb-qny" secondAttribute="trailing" id="bg0-Wz-JiG"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
