@@ -24,6 +24,8 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+*.pub
+id_rsa_jaimeyesidleonparada
 
 ## Obj-C/Swift specific
 *.hmap
