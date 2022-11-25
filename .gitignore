@@ -25,6 +25,7 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 *.pub
+*.DS_Store
 id_rsa_jaimeyesidleonparada
 
 ## Obj-C/Swift specific
