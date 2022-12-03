@@ -5,6 +5,7 @@
 //  Created by Jaime Leon Parada on 30/11/22.
 //
 
+import Foundation
 import EssentialFeed
 
 public final class FeedUIComposer {
